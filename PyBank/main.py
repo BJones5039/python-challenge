@@ -5,7 +5,7 @@ import os
 import csv
 
 #set path for file
-csvpath = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+csvpath = os.path.join('Resources', 'budget_data.csv')
 
 #open the csv
 with open(csvpath) as csvfile:
@@ -17,5 +17,9 @@ with open(csvpath) as csvfile:
 
     #read the header row
     csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
+
+#pybank analysis
+print("Financial Analysis")
+
+print ("-------------------------------------------------------------------------------------")
 
