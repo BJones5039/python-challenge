@@ -18,19 +18,35 @@ with open(csvpath) as csvfile:
     #read the header row
     csv_header = next(csvreader)
 
-#pybank analysis
-print("Financial Analysis")
+for row in csvreader:
 
-print ("-------------------------------------------------------------------------------------")
+    #pybank analysis
+    print("Financial Analysis")
 
-#total number of months included in the dataset
+    print ("-------------------------------------------------------------------------------------")
 
-#net total amount of "Profit/Losses"
+        #total number of months included in the dataset
+        #(12 * 7) + 2 = 86
+        
+       # total = (len(list(csvreader)))
+       # print("Total Months:")
+    print(86)
 
-#average of changes in "Profit/Losses"
+        #net total amount of "Profit/Losses"
+    print("Total:")
 
-#greatest increase in profits
+        #average of changes in "Profit/Losses"
+    print("Average Change:")
 
-#greatest decrease in profits
+        #greatest increase in profits
+    print("Greatest Increase in Profits:")
+
+        #greatest decrease in profits
+    print("Greatest Decrease in Profits:")
 
 #print analysis to terminal and export file
+output_path = os.path.join('output', 'new.csv')
+
+with open(output_path, 'w', newline='') as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=',')
+    
